@@ -1,0 +1,26 @@
+INFO: 2018/05/25 13:22:58 log.go:46: Start up Info log
+INFO: 2018/05/25 14:06:44 log.go:46: Start up Info log
+INFO: 2018/05/25 14:07:36 server.go:351: List ALl Orders!
+INFO: 2018/05/26 01:00:34 log.go:46: Start up Info log
+INFO: 2018/05/26 01:02:25 server.go:473: No Comment Now!
+INFO: 2018/05/26 01:03:03 server.go:459: 添加评论成功!
+INFO: 2018/05/26 01:03:08 server.go:476: List ALl Comments!
+INFO: 2018/05/26 09:24:18 log.go:46: Start up Info log
+INFO: 2018/05/26 09:24:39 server.go:144: Get All Restaurants!
+INFO: 2018/05/26 09:25:11 server.go:144: Get All Restaurants!
+INFO: 2018/05/26 10:57:41 log.go:46: Start up Info log
+INFO: 2018/05/26 10:58:29 server.go:507: List All Tags!
+INFO: 2018/05/26 10:58:55 server.go:497: Get CommentCounts by Tag fail!
+INFO: 2018/05/26 10:59:00 server.go:497: Get CommentCounts by Tag fail!
+INFO: 2018/05/26 10:59:03 server.go:507: List All Tags!
+INFO: 2018/05/26 10:59:07 server.go:507: List All Tags!
+INFO: 2018/05/26 11:00:28 log.go:46: Start up Info log
+INFO: 2018/05/26 11:00:41 server.go:498: Get CommentCounts by Tag fail!
+INFO: 2018/05/26 11:02:07 log.go:46: Start up Info log
+INFO: 2018/05/26 11:02:13 log.go:46: Start up Info log
+INFO: 2018/05/26 11:02:17 server.go:494: Get CommentCounts by Tag!
+INFO: 2018/05/26 11:06:22 log.go:46: Start up Info log
+INFO: 2018/05/26 11:07:04 log.go:46: Start up Info log
+INFO: 2018/05/26 11:07:46 log.go:46: Start up Info log
+INFO: 2018/05/26 11:08:50 log.go:46: Start up Info log
+INFO: 2018/05/26 11:09:37 log.go:46: Start up Info log
