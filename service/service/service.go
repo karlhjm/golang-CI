@@ -18,7 +18,6 @@ func CustomerRegister(name string, password string, restaurant_id int, phone str
 	v.Restaurant_ID = restaurant_id
 	v.Phone = phone
 	if err := entity.CreateCustomer(&v); err != nil {
-		//fmt.Println("User Register: Already exist username")
 		loghelper.Error.Println("User Register: Already exist username")
 		return false, nil
 	}
@@ -44,7 +43,6 @@ func RestaurantRegister(name string, address string, certificates string, server
 	v.Certificates = certificates
 	v.Servertime = servertime
 	if err := entity.CreateRestaurant(&v); err != nil {
-		//fmt.Println("Restaurant Register: Already exist Restaurant")
 		loghelper.Error.Println("Restaurant Register: Already exist Restaurant")
 		return false, nil
 	}
@@ -74,10 +72,7 @@ func UpdateRestaurant(name string, address string, servertime string, certificat
 }
 
 func MenufoodRegister(name string, price float64, restaurant_id int, categorys string, detail string, src string) (bool, error) {
-	//fmt.Println("2.RestaurantRegisterTest:")
 	var v entity.Menufood
-	//v.ID = 0
-	//v.ID = id
 	v.Name = name
 	v.Price = price
 	v.Restaurant_id = restaurant_id
@@ -123,14 +118,12 @@ func DeleteMenufood(id int) int {
 
 func OrderfoodRegister(customer_phone string, table_id int, order_contain *simplejson.Json, total float64, order_num int, time string) (bool, error) {
 	var v entity.Orders
-	//var id int
 	v.Customer_phone = customer_phone
 	v.Table_id = table_id
 	v.Restaurant_id = 0
 	v.Total = total
 	v.Time = time
 	id, err := entity.CreateOrder(&v)
-	//fmt.Println("OrderfoodRegister: ", id, order_num)
 	if err != nil {
 		loghelper.Error.Println("Order Register: Already exist Order")
 		return false, nil
@@ -155,11 +148,7 @@ func ListAllOrders() []entity.Order_ins {
 	order := entity.QueryOrder(func(u *entity.Orders) bool {
 		return true
 	})
-	// orderfood := entity.QueryOrderfood(func(u *entity.Orderfood) bool {
-	// 	return true
-	// })
 	t := make([]entity.Order_ins, len(order))
-	//var t []entity.Order_ins
 	for i := 0; i < len(order); i++ {
 		t[i].ID = order[i].ID
 		t[i].Table_id = order[i].Table_id
@@ -198,7 +187,6 @@ func GetOrderByID(id int) *entity.Order_ins {
 func GetOrderByPhone(phone string) []entity.Order_ins {
 	order := *entity.QueryOrderByPhone(phone)
 	t := make([]entity.Order_ins, len(order))
-	//var t []entity.Order_ins
 	for i := 0; i < len(order); i++ {
 		t[i].ID = order[i].ID
 		t[i].Table_id = order[i].Table_id

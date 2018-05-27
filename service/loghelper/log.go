@@ -40,7 +40,6 @@ func init() {
 	errlog = getErrLogFile()
 	infolog = getLogFile()
 	set(infolog, os.Stdout, errlog)
-
 	//Info.Println("Special Information")
 	//Warning.Println("There is something you need to know about")
 	Info.Println("Start up Info log")

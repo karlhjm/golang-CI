@@ -10,8 +10,6 @@ type CommentFilter func(*Comment) bool
 
 func CreateCustomer(v *Customer) error {
 	return insertCustomer(v)
-	// uData = append(uData, *v.Copy())
-	// dirty = true
 }
 
 func QueryCustomer(filter CustomerFilter) []Customer {
@@ -32,8 +30,6 @@ func QueryCustomerByName(v string) *Customer {
 //CreateRestaurant ...
 func CreateRestaurant(v *Restaurant) error {
 	return insertRestaurant(v)
-	// uData = append(uData, *v.Copy())
-	// dirty = true
 }
 
 func QueryRestaurant(filter RestaurantFilter) []Restaurant {
@@ -67,8 +63,6 @@ func UpdateRestaurant(filter RestaurantFilter, switcher func(*Restaurant)) int {
 
 func CreateMenufood(v *Menufood) error {
 	return insertMenufood(v)
-	// uData = append(uData, *v.Copy())
-	// dirty = true
 }
 
 func QueryMenufood(filter MenufoodFilter) []Menufood {
@@ -123,14 +117,10 @@ func DeleteMenufood(filter MenufoodFilter) int {
 
 func CreateOrder(v *Orders) (int, error) {
 	return insertOrder(v)
-	// uData = append(uData, *v.Copy())
-	// dirty = true
 }
 
 func CreateOrderfood(v *Orderfood) error {
 	return insertOrderfood(v)
-	// uData = append(uData, *v.Copy())
-	// dirty = true
 }
 
 func QueryOrder(filter OrderFilter) []Orders {

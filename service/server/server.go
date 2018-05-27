@@ -105,12 +105,6 @@ func RestaurantRegisterHandler(formatter *render.Render) http.HandlerFunc {
 		//fmt.Println()
 		certificates, _ := js.Get("certificates").String()
 		servertime, _ := js.Get("server_time").String()
-		// req.ParseForm()
-		// name := req.PostForm[`name`][0]
-		// address := req.PostForm[`location`][0]
-		// certificates := req.PostForm[`certificates`][0]
-		// servertime := req.PostForm[`server_time`][0]
-		//fmt.Println("1.RestaurantRegisterTest:")
 		flag, _ := service.RestaurantRegister(name, address, certificates, servertime)
 		if flag == true {
 			formatter.JSON(w, 201, struct {
@@ -150,9 +144,6 @@ func ListAllRestaurantHandler(formatter *render.Render) http.HandlerFunc {
 
 func GetRestaurantByNameHandler(r *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		// fmt.Println("Get by name")
-		//vars := mux.Vars(req)
-		//name := vars["name"]
 		req.ParseForm()
 		path := filepath.FromSlash(req.RequestURI)
 		_, name := filepath.Split(path)
@@ -178,11 +169,6 @@ func RestaurantUpdateHandler(formatter *render.Render) http.HandlerFunc {
 		location, _ := js.Get("location").String()
 		certificates, _ := js.Get("certificates").String()
 		server_time, _ := js.Get("server_time").String()
-		// req.ParseForm()
-		// name := req.PostForm[`name`][0]
-		// location := req.PostForm[`location`][0]
-		// server_time := req.PostForm[`server_time`][0]
-		// certificates := req.PostForm[`certificates`][0]
 		flag := service.UpdateRestaurant(name, location, server_time, certificates)
 		if flag == 0 {
 			formatter.JSON(w, 404, nil)
@@ -210,8 +196,6 @@ func MenufoodRegisterHandler(formatter *render.Render) http.HandlerFunc {
 		categorys, _ := js.Get("categorys").String()
 		price, _ := js.Get("price").Float64()
 		flag, _ := service.MenufoodRegister(name, price, 0, categorys, detail, src)
-		//flag, _ := api.CustomerRegister(req.PostForm)
-		//fmt.Println("4.RestaurantRegisterTest:")
 		if flag == true {
 			formatter.JSON(w, 201, struct {
 				Status  int    `json:"status"`
@@ -231,7 +215,6 @@ func ListAllMenufoodHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
 		req.ParseForm()
 		res := service.ListAllMenufoods()
-		//formatter.JSON(w, 200, res)
 		if len(res) == 0 {
 			formatter.JSON(w, 404, nil)
 			loghelper.Info.Println("There isn't any menufood now!")
@@ -245,9 +228,6 @@ func ListAllMenufoodHandler(formatter *render.Render) http.HandlerFunc {
 
 func GetMenufoodByNameHandler(r *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		//fmt.Println("Get by name")
-		//vars := mux.Vars(req)
-		//name := vars["name"]
 		req.ParseForm()
 		path := filepath.FromSlash(req.RequestURI)
 		_, name := filepath.Split(path)
@@ -266,7 +246,6 @@ func GetMenufoodByNameHandler(r *render.Render) http.HandlerFunc {
 
 func MenufoodUpdateHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		//fmt.Println("update menufood!")
 		defer req.Body.Close()
 		js, _ := simplejson.NewFromReader(req.Body)
 		id, _ := js.Get("id").Int()
@@ -328,7 +307,6 @@ func OrderRegisterHandler(formatter *render.Render) http.HandlerFunc {
 		order_contain := js.Get("order_contain")
 		order_num, _ := js.Get("order_nums").Int()
 		time, _ := js.Get("order_time").String()
-		//fmt.Println(time)
 		flag, _ := service.OrderfoodRegister(phone, table_id, order_contain, total, order_num, time)
 		if flag == true {
 			formatter.JSON(w, 201, struct {
@@ -359,9 +337,6 @@ func ListAllOrderHandler(formatter *render.Render) http.HandlerFunc {
 
 func OrderDeleteHandlerByID(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		//fmt.Println("delete order!")
-		// req.ParseForm()
-		// name := req.PostForm[`name`][0]
 		defer req.Body.Close()
 		js, _ := simplejson.NewFromReader(req.Body)
 		id, _ := js.Get("order_id").Int()
@@ -383,7 +358,6 @@ func OrderDeleteHandlerByID(formatter *render.Render) http.HandlerFunc {
 // /v1/orderid/{orderid}
 func GetOrderByIDHandler(r *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		fmt.Println("Get by ID")
 		req.ParseForm()
 		if len(req.Form["order_id"][0]) != 0 {
 			id, err := strconv.ParseInt(req.Form["order_id"][0], 10, 32)
@@ -451,7 +425,6 @@ func CommentRegisterHandler(formatter *render.Render) http.HandlerFunc {
 		tag, _ := js.Get("tag").String()
 		client_text, _ := js.Get("client_text").String()
 		merchant_text, _ := js.Get("merchant_text").String()
-		//fmt.Println(time)
 		flag, _ := service.CommentRegister(order_id, comment_star, comment_at, usr_name, tag, usr_photo, client_text, merchant_text)
 		if flag == true {
 			formatter.JSON(w, 201, struct {
