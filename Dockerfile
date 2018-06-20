@@ -1,6 +1,8 @@
 FROM golang:1.9 
-COPY . "$GOPATH/src/canyonsysu" 
-RUN cd "$GOPATH/src/canyonsysu" && go get -v && go install -v
+COPY . "$GOPATH/src/github.com/moandy/canyonsysu" 
+RUN cd "$GOPATH/src/github.com/moandy/canyonsysu" && go get -v && go build .
 WORKDIR / 
-EXPOSE 8080 
+EXPOSE 7070 
 VOLUME ["/data"] 
+RUN chmod +x canyonsysu
+ENTRYPOINT ["./canyonsysu"]
