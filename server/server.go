@@ -38,7 +38,7 @@ func initRoutes(mx *mux.Router, formatter *render.Render) {
 	mx.HandleFunc("/v1/restaurants", ListAllRestaurantHandler(formatter)).Methods("GET")
 	//mx.HandleFunc("/v1/restaurants/{name:[_a-zA-Z0-9]+}", GetRestaurantByNameHandler(formatter)).Methods("GET")
 	mx.HandleFunc("/v1/restaurant/update", RestaurantUpdateHandler(formatter)).Methods("POST")
-	mx.HandleFunc("/v1/menufoods", MenufoodRegisterHandler(formatter)).Methods("POST")
+	mx.HandleFunc("/v1/addfood", MenufoodRegisterHandler(formatter)).Methods("POST")
 	mx.HandleFunc("/v1/menufoods", ListAllMenufoodHandler(formatter)).Methods("GET")
 	//mx.HandleFunc("/v1/menufoods/{name:[_a-zA-Z0-9]+}", GetMenufoodByNameHandler(formatter)).Methods("GET")
 	mx.HandleFunc("/v1/menufood/update", MenufoodUpdateHandler(formatter)).Methods("POST")
@@ -54,6 +54,18 @@ func initRoutes(mx *mux.Router, formatter *render.Render) {
 	mx.HandleFunc("/v1/comments/scores", ListServiceHandler(formatter)).Methods("GET")
 	mx.HandleFunc("/v1/menufood/tag", ListAllMenufoodThroughTagHandler(formatter)).Methods("GET")
 	mx.HandleFunc("/v1/comment/offset", GetCommentByCountHandler(formatter)).Methods("GET")
+	mx.HandleFunc("/v1/menufood/categorys", ListAllCategorysHandler(formatter)).Methods("GET")
+	//mx.HandleFunc("/v1/menufood/display", ListAllMenufoodByTagHandler(formatter)).Methods("GET")
+}
+
+
+func ListAllCategorysHandler(formatter *render.Render) http.HandlerFunc {
+	return func(w http.ResponseWriter, req *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		categorys := service.ListAllCategorys()
+		formatter.JSON(w, 200, categorys)
+	}
 }
 
 func GetCommentByCountHandler(formatter *render.Render) http.HandlerFunc {
@@ -180,25 +192,6 @@ func ListAllRestaurantHandler(formatter *render.Render) http.HandlerFunc {
 	}
 }
 
-// func GetRestaurantByNameHandler(r *render.Render) http.HandlerFunc {
-// 	return func(w http.ResponseWriter, req *http.Request) {
-// 		w.Header().Set("Access-Control-Allow-Origin","*")
-// 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-// 		req.ParseForm()
-// 		path := filepath.FromSlash(req.RequestURI)
-// 		_, name := filepath.Split(path)
-// 		fmt.Println(name)
-// 		restaurant := service.GetRestaurantByName(name)
-// 		fmt.Println(restaurant)
-// 		if restaurant != nil {
-// 			r.JSON(w, 200, restaurant)
-// 			loghelper.Info.Println("Get the Restaurant by name!")
-// 		} else {
-// 			r.JSON(w, 404, nil)
-// 			loghelper.Info.Println("None restaurant call the name!")
-// 		}
-// 	}
-// }
 
 func RestaurantUpdateHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
@@ -230,13 +223,20 @@ func MenufoodRegisterHandler(formatter *render.Render) http.HandlerFunc {
 		w.Header().Set("Access-Control-Allow-Origin","*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		defer req.Body.Close()
-		js, _ := simplejson.NewFromReader(req.Body)
+		//js, _ := simplejson.NewFromReader(req.Body)
+		req.ParseForm()
+		//fmt.Println(req.Form["name"][0])
 		//id, _ := js.Get("id").Int()
-		name, _ := js.Get("name").String()
-		src, _ := js.Get("src").String()
-		detail, _ := js.Get("detail").String()
-		categorys, _ := js.Get("categorys").String()
-		price, _ := js.Get("price").Float64()
+		// name, _ := js.Get("name").String()
+		// src, _ := js.Get("src").String()
+		// detail, _ := js.Get("detail").String()
+		// categorys, _ := js.Get("categorys").String()
+		// price, _ := js.Get("price").Float64()
+		name := req.Form["name"][0]
+		src := req.Form["src"][0]
+		detail := req.Form["detail"][0]
+		categorys := req.Form["categorys"][0]
+		price, _ := strconv.ParseFloat(req.Form["price"][0], 64)
 		flag, _ := service.MenufoodRegister(name, price, 0, categorys, detail, src)
 		if flag == true {
 			formatter.JSON(w, 201, struct {

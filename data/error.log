@@ -33,3 +33,47 @@ ERROR: 2018/06/19 11:44:52 log.go:47: Start up Error log
 ERROR: 2018/06/20 13:53:38 log.go:47: Start up Error log
 ERROR: 2018/06/20 13:58:47 log.go:47: Start up Error log
 ERROR: 2018/06/20 13:59:25 log.go:47: Start up Error log
+ERROR: 2018/06/21 09:10:47 log.go:47: Start up Error log
+ERROR: 2018/06/21 09:14:45 initial.go:60: insertRestaurant Error: 0 Error 1062: Duplicate entry 'mohk' for key 'UQE_restaurant_name'
+ERROR: 2018/06/21 09:14:45 service.go:46: Restaurant Register: Already exist Restaurant
+ERROR: 2018/06/21 09:39:18 log.go:47: Start up Error log
+ERROR: 2018/06/21 09:59:00 log.go:47: Start up Error log
+ERROR: 2018/06/21 10:13:41 log.go:47: Start up Error log
+ERROR: 2018/06/21 10:15:04 log.go:47: Start up Error log
+ERROR: 2018/06/21 10:17:11 log.go:47: Start up Error log
+ERROR: 2018/06/21 10:34:51 log.go:47: Start up Error log
+ERROR: 2018/06/21 11:14:20 log.go:47: Start up Error log
+ERROR: 2018/06/21 11:15:03 initial.go:60: insertRestaurant Error: 0 Error 1366: Incorrect string value: '\xE9\xA4\x90\xE9\xA6\x86...' for column 'name' at row 1
+ERROR: 2018/06/21 11:15:03 service.go:46: Restaurant Register: Already exist Restaurant
+ERROR: 2018/06/21 11:17:12 initial.go:60: insertRestaurant Error: 0 Error 1366: Incorrect string value: '\xE9\xA4\x90\xE9\xA6\x86...' for column 'name' at row 1
+ERROR: 2018/06/21 11:17:12 service.go:46: Restaurant Register: Already exist Restaurant
+ERROR: 2018/06/21 11:17:14 initial.go:60: insertRestaurant Error: 0 Error 1366: Incorrect string value: '\xE9\xA4\x90\xE9\xA6\x86...' for column 'name' at row 1
+ERROR: 2018/06/21 11:17:14 service.go:46: Restaurant Register: Already exist Restaurant
+ERROR: 2018/06/21 11:28:29 log.go:47: Start up Error log
+ERROR: 2018/06/21 11:28:36 initial.go:60: insertRestaurant Error: 0 Error 1364: Field 'i_d' doesn't have a default value
+ERROR: 2018/06/21 11:28:36 service.go:46: Restaurant Register: Already exist Restaurant
+ERROR: 2018/06/21 11:38:27 log.go:47: Start up Error log
+ERROR: 2018/06/24 20:35:52 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:27:36 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:29:48 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:30:53 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:33:36 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:38:42 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:40:13 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:40:17 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:40:39 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:40:44 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:41:16 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:42:39 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:42:44 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:42:58 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:43:00 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:43:44 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:45:29 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:45:50 log.go:47: Start up Error log
+ERROR: 2018/06/24 21:45:53 service.go:84: Error 1062: Duplicate entry '' for key 'UQE_menufood_name'
+ERROR: 2018/06/24 21:49:10 log.go:47: Start up Error log
+ERROR: 2018/06/25 14:23:59 log.go:47: Start up Error log
+ERROR: 2018/06/25 14:24:11 log.go:47: Start up Error log
+ERROR: 2018/06/25 14:24:24 log.go:47: Start up Error log
+ERROR: 2018/06/25 14:28:52 log.go:47: Start up Error log

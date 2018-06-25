@@ -269,3 +269,8 @@ func ListAllTags() []entity.Tags {
 func ListCommentsByCount(begin, offset int) []entity.Comment {
 	return entity.QueryCommentByCount(begin, offset)
 }
+
+func ListAllCategorys() []string {
+	str := entity.FindAllCategorys()
+	return str
+}

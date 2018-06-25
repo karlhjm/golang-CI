@@ -17,7 +17,7 @@ func checkErr(err error) {
 }
 
 func init() {
-	db, err := xorm.NewEngine("mysql", "root:wsm971058171@tcp(127.0.0.1:3306)/canyonsysu?charset=utf8&parseTime=true")
+	db, err := xorm.NewEngine("mysql", "root:wsm971058171@tcp(119.23.243.149:3306)/canyonsysu?charset=utf8&parseTime=true")
 	checkErr(err)
 	engine = db
 	db.Sync2(new(Restaurant), new(Menufood), new(Orders), new(Orderfood), new(Comment))
@@ -54,9 +54,10 @@ func findCustomerByName(name string) *Customer {
 }
 
 func insertRestaurant(v *Restaurant) error {
-	fmt.Println("3.RestaurantRegisterTest:")
+	//fmt.Println("3.RestaurantRegisterTest:")
 	if affected, err := engine.Insert(v); err != nil {
-		fmt.Println("insertRestaurant Error:", affected, err)
+		//fmt.Println("insertRestaurant Error:", affected, err)
+		loghelper.Error.Println("insertRestaurant Error:", affected, err)
 		return err
 	}
 	return nil
@@ -275,4 +276,15 @@ func findCommentByCount(begin int, offset int) []Comment {
 	sql := "select * from comment order by i_d desc limit ?, ?"
 	engine.Sql(sql, begin, offset).Find(&vec)
 	return vec
+}
+
+func FindAllCategorys() []string {
+	sql := "select distinct categorys from menufood"
+	vec := make([]Menufood, 0)
+	engine.Sql(sql).Find(&vec)
+	var str []string
+	for _, value := range vec {
+		str = append(str, value.Categorys)
+	}
+	return str
 }
