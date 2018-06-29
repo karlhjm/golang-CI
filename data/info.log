@@ -178,3 +178,183 @@ INFO: 2018/06/25 14:23:59 log.go:45: Start up Info log
 INFO: 2018/06/25 14:24:11 log.go:45: Start up Info log
 INFO: 2018/06/25 14:24:24 log.go:45: Start up Info log
 INFO: 2018/06/25 14:28:52 log.go:45: Start up Info log
+INFO: 2018/06/25 14:52:54 log.go:45: Start up Info log
+INFO: 2018/06/25 15:04:22 log.go:45: Start up Info log
+INFO: 2018/06/25 16:34:24 log.go:45: Start up Info log
+INFO: 2018/06/25 16:36:34 server.go:74: 添加 中式食物 种类成功
+INFO: 2018/06/25 16:42:48 log.go:45: Start up Info log
+INFO: 2018/06/25 16:46:12 server.go:74: 添加 中式炖汤 种类成功
+INFO: 2018/06/28 10:00:54 log.go:45: Start up Info log
+INFO: 2018/06/28 10:04:51 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:05:17 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:05:33 server.go:374: No such food couldn't be delete by id!
+INFO: 2018/06/28 10:07:03 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:07:27 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:08:15 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:08:32 server.go:374: No such food couldn't be delete by id!
+INFO: 2018/06/28 10:11:02 log.go:45: Start up Info log
+INFO: 2018/06/28 10:11:57 log.go:45: Start up Info log
+INFO: 2018/06/28 10:12:10 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:12:28 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:12:38 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:12:42 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:12:55 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:12:57 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:01 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:03 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:16:04 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:09 server.go:374: No such food couldn't be delete by id!
+INFO: 2018/06/28 10:16:13 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:25 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:30 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:33 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:16:33 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:16:36 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:18:32 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:18:57 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:18:57 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:19:38 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:19:41 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:19:41 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:19:49 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:21:04 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:21:07 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:21:55 server.go:272: 添加 demo1 食品成功
+INFO: 2018/06/28 10:22:09 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:22:29 server.go:381: Delete Menufood by ID!
+INFO: 2018/06/28 10:22:29 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:29:37 server.go:74: 添加 1 种类成功
+INFO: 2018/06/28 10:31:12 server.go:74: 添加 冷饮 种类成功
+INFO: 2018/06/28 10:31:52 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:33:07 server.go:272: 添加 可乐 食品成功
+INFO: 2018/06/28 10:33:14 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:33:44 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:33:47 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:33:48 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:33:58 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:34:34 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:34:46 server.go:206: None restaurant call the name!
+INFO: 2018/06/28 10:34:52 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:35:00 server.go:203: Get the Restaurant by name!
+INFO: 2018/06/28 10:35:39 server.go:306: Get All Menufoods!
+INFO: 2018/06/28 10:40:49 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:41:23 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:41:58 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:42:14 server.go:570: List All Tags!
+INFO: 2018/06/28 10:42:14 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:42:41 log.go:45: Start up Info log
+INFO: 2018/06/28 10:42:44 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:42:55 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:45:48 log.go:45: Start up Info log
+INFO: 2018/06/28 10:45:53 server.go:570: List All Tags!
+INFO: 2018/06/28 10:46:07 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:46:25 log.go:45: Start up Info log
+INFO: 2018/06/28 10:46:36 server.go:570: List All Tags!
+INFO: 2018/06/28 10:46:38 server.go:570: List All Tags!
+INFO: 2018/06/28 10:46:47 server.go:556: Get CommentCounts by Tag!
+INFO: 2018/06/28 10:49:22 server.go:570: List All Tags!
+INFO: 2018/06/28 10:49:22 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:49:37 server.go:203: Get the Restaurant by name!
+INFO: 2018/06/28 10:49:41 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:49:59 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:50:05 server.go:570: List All Tags!
+INFO: 2018/06/28 10:50:05 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:50:37 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:50:37 server.go:570: List All Tags!
+INFO: 2018/06/28 10:50:52 server.go:570: List All Tags!
+INFO: 2018/06/28 10:50:52 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:51:28 server.go:570: List All Tags!
+INFO: 2018/06/28 10:51:28 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:51:28 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:52:00 server.go:570: List All Tags!
+INFO: 2018/06/28 10:52:00 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:52:01 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:52:18 server.go:570: List All Tags!
+INFO: 2018/06/28 10:52:18 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:52:18 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:53:34 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:53:34 server.go:570: List All Tags!
+INFO: 2018/06/28 10:53:34 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:53:57 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:53:57 server.go:570: List All Tags!
+INFO: 2018/06/28 10:53:58 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:54:05 server.go:570: List All Tags!
+INFO: 2018/06/28 10:54:05 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:54:06 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:56:55 server.go:570: List All Tags!
+INFO: 2018/06/28 10:56:55 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:56:56 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 10:57:04 server.go:570: List All Tags!
+INFO: 2018/06/28 10:57:04 server.go:539: List ALl Comments!
+INFO: 2018/06/28 10:57:04 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:04:27 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:04:27 server.go:570: List All Tags!
+INFO: 2018/06/28 11:04:28 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:05:57 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:05:57 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:05:57 server.go:570: List All Tags!
+INFO: 2018/06/28 11:05:57 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:06:00 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:02 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:04 server.go:570: List All Tags!
+INFO: 2018/06/28 11:06:04 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:06:05 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:06:06 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:07 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:08 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:08 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:09 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:10 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:11 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:12 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:13 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:13 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:14 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:15 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:15 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:16 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:16 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:17 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:18 server.go:522: 添加评论成功!
+INFO: 2018/06/28 11:06:54 server.go:570: List All Tags!
+INFO: 2018/06/28 11:06:54 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:06:54 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:09:18 server.go:570: List All Tags!
+INFO: 2018/06/28 11:09:18 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:09:18 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:10:11 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:10:11 server.go:570: List All Tags!
+INFO: 2018/06/28 11:10:12 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:10:46 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:10:46 server.go:570: List All Tags!
+INFO: 2018/06/28 11:10:46 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:11:30 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:11:30 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:11:30 server.go:570: List All Tags!
+INFO: 2018/06/28 11:12:11 server.go:570: List All Tags!
+INFO: 2018/06/28 11:12:11 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:12:11 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:13:14 server.go:570: List All Tags!
+INFO: 2018/06/28 11:13:14 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:13:14 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:13:45 server.go:570: List All Tags!
+INFO: 2018/06/28 11:13:45 server.go:539: List ALl Comments!
+INFO: 2018/06/28 11:13:45 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:15:37 server.go:570: List All Tags!
+INFO: 2018/06/28 11:15:38 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:17:19 server.go:570: List All Tags!
+INFO: 2018/06/28 11:17:19 server.go:216: Get All Restaurants!
+INFO: 2018/06/28 11:18:54 log.go:45: Start up Info log
+INFO: 2018/06/28 11:19:01 server.go:573: List All Tags!
+INFO: 2018/06/28 11:19:01 server.go:219: Get All Restaurants!
+INFO: 2018/06/28 11:19:14 log.go:45: Start up Info log
+INFO: 2018/06/28 11:20:24 server.go:573: List All Tags!
+INFO: 2018/06/28 11:20:24 server.go:219: Get All Restaurants!
+INFO: 2018/06/28 11:21:30 log.go:45: Start up Info log
+INFO: 2018/06/28 11:21:33 server.go:573: List All Tags!
+INFO: 2018/06/28 11:21:34 server.go:219: Get All Restaurants!
+INFO: 2018/06/28 11:22:56 server.go:573: List All Tags!
+INFO: 2018/06/28 11:22:56 server.go:219: Get All Restaurants!
+INFO: 2018/06/28 11:23:32 server.go:219: Get All Restaurants!
+INFO: 2018/06/28 11:23:32 server.go:573: List All Tags!
+INFO: 2018/06/29 16:02:09 log.go:45: Start up Info log

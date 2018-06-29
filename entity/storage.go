@@ -8,6 +8,10 @@ type OrderFilter func(*Orders) bool
 type OrderfoodFilter func(*Orderfood) bool
 type CommentFilter func(*Comment) bool
 
+func CreateCategorys(v *Categorys) error {
+	return insertCategorys(v)
+}
+
 func CreateCustomer(v *Customer) error {
 	return insertCustomer(v)
 }
