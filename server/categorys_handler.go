@@ -3,8 +3,8 @@ package server
 import (
 	//"go-agenda-service/service/entity"
 	//"go-agenda-service/service/service"
-	"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/service"
+	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karl-jm-huang/golang-CI/service"
 	//"fmt"
 	"net/http"
 	//"path/filepath"
@@ -20,7 +20,7 @@ import (
 
 func TagRegisterHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		req.ParseForm()
 		tag := req.Form["tag"][0]
@@ -42,7 +42,7 @@ func TagRegisterHandler(formatter *render.Render) http.HandlerFunc {
 
 func ListAllCategorysHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		categorys := service.ListAllCategorys()
 		if len(categorys) != 0 {

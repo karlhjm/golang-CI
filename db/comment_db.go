@@ -1,12 +1,11 @@
 package db
 
 import (
-	"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/entity"
 	_ "github.com/go-sql-driver/mysql" // for init
+	"github.com/karl-jm-huang/golang-CI/entity"
+	"github.com/karl-jm-huang/golang-CI/loghelper"
 	//"github.com/go-xorm/xorm"
 )
-
 
 func insertComment(v *entity.Comment) error {
 	//fmt.Println("3.RestaurantRegisterTest:")

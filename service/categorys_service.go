@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/moandy/canyonsysu/db"
-	"github.com/moandy/canyonsysu/entity"
-	"github.com/moandy/canyonsysu/loghelper"
+	"github.com/karl-jm-huang/golang-CI/db"
+	"github.com/karl-jm-huang/golang-CI/entity"
+	"github.com/karl-jm-huang/golang-CI/loghelper"
 	//"fmt"
 	//simplejson "github.com/bitly/go-simplejson"
 )

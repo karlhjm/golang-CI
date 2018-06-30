@@ -3,12 +3,13 @@ package server
 import (
 	//"go-agenda-service/service/entity"
 	//"go-agenda-service/service/service"
-	"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/service"
+	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karl-jm-huang/golang-CI/service"
 	//"fmt"
 	"net/http"
 	"path/filepath"
 	"strconv"
+
 	simplejson "github.com/bitly/go-simplejson"
 	//"github.com/codegangsta/negroni"
 	//"github.com/gorilla/mux"
@@ -18,7 +19,7 @@ import (
 
 func MenufoodRegisterHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		defer req.Body.Close()
 		//js, _ := simplejson.NewFromReader(req.Body)
@@ -45,7 +46,7 @@ func MenufoodRegisterHandler(formatter *render.Render) http.HandlerFunc {
 
 func ListAllMenufoodHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		req.ParseForm()
 		if len(req.Form["name"][0]) != 0 {
@@ -74,7 +75,7 @@ func ListAllMenufoodHandler(formatter *render.Render) http.HandlerFunc {
 
 func GetMenufoodByNameHandler(r *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		req.ParseForm()
 		path := filepath.FromSlash(req.RequestURI)
@@ -124,7 +125,7 @@ func MenufoodUpdateHandler(formatter *render.Render) http.HandlerFunc {
 
 func MenufoodDeleteHandlerByID(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		//fmt.Println("delete menufood!")
 		req.ParseForm()
@@ -146,7 +147,7 @@ func MenufoodDeleteHandlerByID(formatter *render.Render) http.HandlerFunc {
 
 func ListAllMenufoodThroughTagHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		res := service.ListAllMenufoodsThroughTags()
 		if len(res) != 0 {

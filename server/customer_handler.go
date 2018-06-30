@@ -4,10 +4,11 @@ import (
 	//"go-agenda-service/service/entity"
 	//"go-agenda-service/service/service"
 	//"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/service"
 	"fmt"
 	"net/http"
-	"path/filepath"	
+	"path/filepath"
+
+	"github.com/karl-jm-huang/golang-CI/service"
 	"github.com/unrolled/render"
 )
 
@@ -20,7 +21,7 @@ func CustomerRegisterHandler(formatter *render.Render) http.HandlerFunc {
 		flag, _ := service.CustomerRegister(name, password, 1, phone)
 		//flag, _ := api.CustomerRegister(req.PostForm)
 		if flag == true {
-			formatter.JSON(w, 201, nil)                                      // expected a user id
+			formatter.JSON(w, 201, nil) // expected a user id
 			//http.Redirect(w, req, "users/"+req.PostForm[`username`][0], 201) //?
 		} else {
 			formatter.JSON(w, 404, nil)

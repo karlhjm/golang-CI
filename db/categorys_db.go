@@ -2,8 +2,8 @@ package db
 
 import (
 	_ "github.com/go-sql-driver/mysql" // for init
-	"github.com/moandy/canyonsysu/entity"
-	"github.com/moandy/canyonsysu/loghelper"
+	"github.com/karl-jm-huang/golang-CI/entity"
+	"github.com/karl-jm-huang/golang-CI/loghelper"
 	//"github.com/go-xorm/xorm"
 )
 

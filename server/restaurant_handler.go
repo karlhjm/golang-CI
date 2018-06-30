@@ -3,10 +3,11 @@ package server
 import (
 	//"go-agenda-service/service/entity"
 	//"go-agenda-service/service/service"
-	"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/service"
 	"fmt"
 	"net/http"
+
+	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karl-jm-huang/golang-CI/service"
 	//"path/filepath"
 	//"strconv"
 	simplejson "github.com/bitly/go-simplejson"
@@ -45,7 +46,7 @@ func RestaurantRegisterHandler(formatter *render.Render) http.HandlerFunc {
 
 func ListAllRestaurantHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		req.ParseForm()
 		if len(req.Form["name"][0]) != 0 {
@@ -69,7 +70,6 @@ func ListAllRestaurantHandler(formatter *render.Render) http.HandlerFunc {
 		}
 	}
 }
-
 
 func RestaurantUpdateHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {

@@ -1,9 +1,10 @@
 package server
+
 import (
 	//"go-agenda-service/service/entity"
 	//"go-agenda-service/service/service"
-	"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/service"
+	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karl-jm-huang/golang-CI/service"
 	//"fmt"
 	"net/http"
 	//"path/filepath"
@@ -43,7 +44,7 @@ func OrderRegisterHandler(formatter *render.Render) http.HandlerFunc {
 
 func ListAllOrderHandler(formatter *render.Render) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin","*")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		req.ParseForm()
 		res := service.ListAllOrders()
