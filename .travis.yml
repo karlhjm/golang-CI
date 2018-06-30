@@ -5,5 +5,5 @@ go:
 before_install:
   - go get -v
 install:
-  - glide install -v
+  - go run main.go
 
