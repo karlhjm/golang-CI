@@ -2,9 +2,11 @@ language: go
 sudo: false
 go:
   - 1.8.1
+services:
+  - mysql
 before_install:
   - go get -v
+  - mysql -e 'create database hello2;'
 script:
-  - go run main.go
   - go test -v -race ./...  # Run all the tests with the race detector enabled
 
