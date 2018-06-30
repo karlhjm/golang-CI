@@ -5,6 +5,7 @@ import (
 	"github.com/moandy/canyonsysu/loghelper"
 	//"fmt"
 	//simplejson "github.com/bitly/go-simplejson"
+	"github.com/moandy/canyonsysu/db"
 )
 
 func RestaurantRegister(name string, address string, certificates string, servertime string) (bool, error) {
@@ -15,7 +16,7 @@ func RestaurantRegister(name string, address string, certificates string, server
 	v.Address = address
 	v.Certificates = certificates
 	v.Servertime = servertime
-	if err := entity.CreateRestaurant(&v); err != nil {
+	if err := db.CreateRestaurant(&v); err != nil {
 		loghelper.Error.Println("Restaurant Register: Already exist Restaurant")
 		return false, nil
 	}
@@ -23,20 +24,20 @@ func RestaurantRegister(name string, address string, certificates string, server
 }
 
 func ListAllRestaurants() []entity.Restaurant {
-	return entity.QueryRestaurant(func(u *entity.Restaurant) bool {
+	return db.QueryRestaurant(func(u *entity.Restaurant) bool {
 		return true
 	})
 }
 
 func GetRestaurantByName(rname string) *entity.Restaurant {
-	return entity.QueryRestaurantByName(rname)
+	return db.QueryRestaurantByName(rname)
 }
 
 func UpdateRestaurant(name string, address string, servertime string, certificates string) int {
 	filter := func(m *entity.Restaurant) bool {
 		return m.Name == name
 	}
-	return entity.UpdateRestaurant(filter, func(arg1 *entity.Restaurant) {
+	return db.UpdateRestaurant(filter, func(arg1 *entity.Restaurant) {
 		arg1.Name = name
 		arg1.Servertime = servertime
 		arg1.Address = address

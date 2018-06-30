@@ -4,7 +4,7 @@ import (
 	"github.com/moandy/canyonsysu/entity"
 	"github.com/moandy/canyonsysu/loghelper"
 	//"fmt"
-
+	"github.com/moandy/canyonsysu/db"
 	//simplejson "github.com/bitly/go-simplejson"
 )
 
@@ -19,7 +19,7 @@ func CommentRegister(order_id, rating_star int, rate_at,
 	v.Client_text = client_text
 	v.Buddha_src = buddha_src
 	v.Tags = tags
-	err := entity.CreateComment(&v)
+	err := db.CreateComment(&v)
 	if err != nil {
 		loghelper.Error.Println(err)
 		return false, err
@@ -28,17 +28,17 @@ func CommentRegister(order_id, rating_star int, rate_at,
 }
 
 func ListAllComments() []entity.Comment {
-	return entity.QueryComment(func(u *entity.Comment) bool {
+	return db.QueryComment(func(u *entity.Comment) bool {
 		return true
 	})
 }
 
 func GetCommentCountByTag(tag string) int {
-	return entity.QueryCommentCountsByTag(tag)
+	return db.QueryCommentCountsByTag(tag)
 }
 
 func ListAllTags() []entity.Tags {
-	tag_str := entity.QueryTag()	
+	tag_str := db.QueryTag()	
 	if len(tag_str) == 0 {
 		return nil
 	}
@@ -55,5 +55,5 @@ func ListAllTags() []entity.Tags {
 }
 
 func ListCommentsByCount(begin, offset int) []entity.Comment {
-	return entity.QueryCommentByCount(begin, offset)
+	return db.QueryCommentByCount(begin, offset)
 }

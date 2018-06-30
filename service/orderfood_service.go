@@ -4,7 +4,7 @@ import (
 	"github.com/moandy/canyonsysu/entity"
 	"github.com/moandy/canyonsysu/loghelper"
 	//"fmt"
-
+	"github.com/moandy/canyonsysu/db"
 	simplejson "github.com/bitly/go-simplejson"
 )
 
@@ -15,7 +15,7 @@ func OrderfoodRegister(customer_phone string, table_id int, order_contain *simpl
 	v.Restaurant_id = 0
 	v.Total = total
 	v.Time = time
-	id, err := entity.CreateOrder(&v)
+	id, err := db.CreateOrder(&v)
 	if err != nil {
 		loghelper.Error.Println("Order Register: Already exist Order")
 		return false, nil
@@ -25,7 +25,7 @@ func OrderfoodRegister(customer_phone string, table_id int, order_contain *simpl
 		t[i].Order_id = id
 		t[i].MenufoodID, _ = order_contain.GetIndex(i).Get("id").Int()
 		t[i].Order_num, _ = order_contain.GetIndex(i).Get("order_num").Int()
-		err := entity.CreateOrderfood(&t[i])
+		err := db.CreateOrderfood(&t[i])
 		if err != nil {
 			DeleteOrderBy(id) //delete the order
 			loghelper.Info.Println("Orderfood Register:Fail!")
@@ -37,7 +37,7 @@ func OrderfoodRegister(customer_phone string, table_id int, order_contain *simpl
 }
 
 func ListAllOrders() []entity.Order_ins {
-	order := entity.QueryOrder(func(u *entity.Orders) bool {
+	order := db.QueryOrder(func(u *entity.Orders) bool {
 		return true
 	})
 	t := make([]entity.Order_ins, len(order))
@@ -47,37 +47,37 @@ func ListAllOrders() []entity.Order_ins {
 		t[i].Total = order[i].Total
 		t[i].Time = order[i].Time
 		t[i].Customer_phone = order[i].Customer_phone
-		t[i].Order_contain = *entity.QueryOrderfoodByID(order[i].ID)
+		t[i].Order_contain = *db.QueryOrderfoodByID(order[i].ID)
 		t[i].Order_num = len(t[i].Order_contain)
 	}
 	return t
 }
 
 func DeleteOrderBy(id int) int {
-	del_ordernum := entity.DeleteOrder(func(m *entity.Orders) bool {
+	del_ordernum := db.DeleteOrder(func(m *entity.Orders) bool {
 		return m.ID == id
 	})
-	entity.DeleteOrderfood(func(m *entity.Orderfood) bool {
+	db.DeleteOrderfood(func(m *entity.Orderfood) bool {
 		return m.Order_id == id
 	})
 	return del_ordernum
 }
 
 func GetOrderByID(id int) *entity.Order_ins {
-	order := entity.QueryOrderByID(id)
+	order := db.QueryOrderByID(id)
 	var t entity.Order_ins
 	t.ID = order.ID
 	t.Table_id = order.Table_id
 	t.Total = order.Total
 	t.Time = order.Time
 	t.Customer_phone = order.Customer_phone
-	t.Order_contain = *entity.QueryOrderfoodByID(order.ID)
+	t.Order_contain = *db.QueryOrderfoodByID(order.ID)
 	t.Order_num = len(t.Order_contain)
 	return &t
 }
 
 func GetOrderByPhone(phone string) []entity.Order_ins {
-	order := *entity.QueryOrderByPhone(phone)
+	order := *db.QueryOrderByPhone(phone)
 	t := make([]entity.Order_ins, len(order))
 	for i := 0; i < len(order); i++ {
 		t[i].ID = order[i].ID
@@ -85,7 +85,7 @@ func GetOrderByPhone(phone string) []entity.Order_ins {
 		t[i].Total = order[i].Total
 		t[i].Time = order[i].Time
 		t[i].Customer_phone = order[i].Customer_phone
-		t[i].Order_contain = *entity.QueryOrderfoodByID(order[i].ID)
+		t[i].Order_contain = *db.QueryOrderfoodByID(order[i].ID)
 		t[i].Order_num = len(t[i].Order_contain)
 	}
 	return t

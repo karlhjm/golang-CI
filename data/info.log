@@ -358,3 +358,6 @@ INFO: 2018/06/28 11:22:56 server.go:219: Get All Restaurants!
 INFO: 2018/06/28 11:23:32 server.go:219: Get All Restaurants!
 INFO: 2018/06/28 11:23:32 server.go:573: List All Tags!
 INFO: 2018/06/29 16:02:09 log.go:45: Start up Info log
+INFO: 2018/06/30 09:59:41 log.go:45: Start up Info log
+INFO: 2018/06/30 10:00:48 log.go:45: Start up Info log
+INFO: 2018/06/30 10:01:30 restaurant_handler.go:68: Get All Restaurants!

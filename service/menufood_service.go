@@ -3,6 +3,7 @@ package service
 import (
 	"github.com/moandy/canyonsysu/entity"
 	"github.com/moandy/canyonsysu/loghelper"
+	"github.com/moandy/canyonsysu/db"
 )
 
 func MenufoodRegister(name string, price float64, restaurant_id int, categorys string, detail string, src string) (bool, error) {
@@ -13,7 +14,7 @@ func MenufoodRegister(name string, price float64, restaurant_id int, categorys s
 	v.Categorys = categorys
 	v.Detail = detail
 	v.Src = src
-	if err := entity.CreateMenufood(&v); err != nil {
+	if err := db.CreateMenufood(&v); err != nil {
 		//fmt.Println("Menufood Register: Already exist Menufood")
 		loghelper.Error.Println(err)
 		return false, err
@@ -22,16 +23,16 @@ func MenufoodRegister(name string, price float64, restaurant_id int, categorys s
 }
 
 func ListAllMenufoods() []entity.Menufood {
-	return entity.QueryMenufood(func(u *entity.Menufood) bool {
+	return db.QueryMenufood(func(u *entity.Menufood) bool {
 		return true
 	})
 }
 
 func ListAllMenufoodsThroughTags() []entity.Menufood_ins {
-	menufoods := entity.QueryMenufood(func(u *entity.Menufood) bool {
+	menufoods := db.QueryMenufood(func(u *entity.Menufood) bool {
 		return true
 	})
-	categorys := entity.FindAllCategorys()
+	categorys := db.FindAllCategorys()
 	var str []string
 	for _, value := range categorys {
 		str = append(str, value.Categorys)
@@ -54,14 +55,14 @@ func ListAllMenufoodsThroughTags() []entity.Menufood_ins {
 }
 
 func GetMenufoodByName(rname string) *entity.Menufood {
-	return entity.QueryMenufoodByName(rname)
+	return db.QueryMenufoodByName(rname)
 }
 
 func UpdateMenufood(id int, src string, name string, price float64, detail string, categorys string) int {
 	filter := func(m *entity.Menufood) bool {
 		return m.ID == id
 	}
-	return entity.UpdateMenufood(filter, func(arg1 *entity.Menufood) {
+	return db.UpdateMenufood(filter, func(arg1 *entity.Menufood) {
 		arg1.Name = name
 		arg1.Src = src
 		arg1.Price = price
@@ -71,7 +72,7 @@ func UpdateMenufood(id int, src string, name string, price float64, detail strin
 }
 
 func DeleteMenufood(id int) int {
-	return entity.DeleteMenufood(func(m *entity.Menufood) bool {
+	return db.DeleteMenufood(func(m *entity.Menufood) bool {
 		return m.ID == id
 	})
 }

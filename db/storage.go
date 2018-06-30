@@ -1,23 +1,25 @@
-package entity
+package db
+
+import"github.com/moandy/canyonsysu/entity"
 
 //CustomerFilter ...
-type CustomerFilter func(*Customer) bool  
-type RestaurantFilter func(*Restaurant) bool
-type MenufoodFilter func(*Menufood) bool
-type OrderFilter func(*Orders) bool
-type OrderfoodFilter func(*Orderfood) bool
-type CommentFilter func(*Comment) bool
+type CustomerFilter func(*entity.Customer) bool  
+type RestaurantFilter func(*entity.Restaurant) bool
+type MenufoodFilter func(*entity.Menufood) bool
+type OrderFilter func(*entity.Orders) bool
+type OrderfoodFilter func(*entity.Orderfood) bool
+type CommentFilter func(*entity.Comment) bool
 
-func CreateCategorys(v *Categorys) error {
+func CreateCategorys(v *entity.Categorys) error {
 	return insertCategorys(v)
 }
 
-func CreateCustomer(v *Customer) error {
+func CreateCustomer(v *entity.Customer) error {
 	return insertCustomer(v)
 }
 
-func QueryCustomer(filter CustomerFilter) []Customer {
-	var customer []Customer
+func QueryCustomer(filter CustomerFilter) []entity.Customer {
+	var customer []entity.Customer
 	cData := findAllCustomers()
 	for _, v := range cData {
 		if filter(&v) {
@@ -27,17 +29,17 @@ func QueryCustomer(filter CustomerFilter) []Customer {
 	return customer
 }
 
-func QueryCustomerByName(v string) *Customer {
+func QueryCustomerByName(v string) *entity.Customer {
 	return findCustomerByName(v)
 }
 
 //CreateRestaurant ...
-func CreateRestaurant(v *Restaurant) error {
+func CreateRestaurant(v *entity.Restaurant) error {
 	return insertRestaurant(v)
 }
 
-func QueryRestaurant(filter RestaurantFilter) []Restaurant {
-	var restaurant []Restaurant
+func QueryRestaurant(filter RestaurantFilter) []entity.Restaurant {
+	var restaurant []entity.Restaurant
 	rData := findAllRestaurants()
 	for _, v := range rData {
 		if filter(&v) {
@@ -47,11 +49,11 @@ func QueryRestaurant(filter RestaurantFilter) []Restaurant {
 	return restaurant
 }
 
-func QueryRestaurantByName(v string) *Restaurant {
+func QueryRestaurantByName(v string) *entity.Restaurant {
 	return findRestaurantByName(v)
 }
 
-func UpdateRestaurant(filter RestaurantFilter, switcher func(*Restaurant)) int {
+func UpdateRestaurant(filter RestaurantFilter, switcher func(*entity.Restaurant)) int {
 	count := 0
 	mData := findAllRestaurants()
 	for i := 0; i < len(mData); i++ {
@@ -65,12 +67,12 @@ func UpdateRestaurant(filter RestaurantFilter, switcher func(*Restaurant)) int {
 	return count
 }
 
-func CreateMenufood(v *Menufood) error {
+func CreateMenufood(v *entity.Menufood) error {
 	return insertMenufood(v)
 }
 
-func QueryMenufood(filter MenufoodFilter) []Menufood {
-	var menufood []Menufood
+func QueryMenufood(filter MenufoodFilter) []entity.Menufood {
+	var menufood []entity.Menufood
 	mfData := findAllMenufoods()
 	for _, v := range mfData {
 		if filter(&v) {
@@ -80,11 +82,11 @@ func QueryMenufood(filter MenufoodFilter) []Menufood {
 	return menufood
 }
 
-func QueryMenufoodByName(v string) *Menufood {
+func QueryMenufoodByName(v string) *entity.Menufood {
 	return findMenufoodByName(v)
 }
 
-func UpdateMenufood(filter MenufoodFilter, switcher func(*Menufood)) int {
+func UpdateMenufood(filter MenufoodFilter, switcher func(*entity.Menufood)) int {
 	count := 0
 	mData := findAllMenufoods()
 	for i := 0; i < len(mData); i++ {
@@ -119,16 +121,16 @@ func DeleteMenufood(filter MenufoodFilter) int {
 	return count
 }
 
-func CreateOrder(v *Orders) (int, error) {
+func CreateOrder(v *entity.Orders) (int, error) {
 	return insertOrder(v)
 }
 
-func CreateOrderfood(v *Orderfood) error {
+func CreateOrderfood(v *entity.Orderfood) error {
 	return insertOrderfood(v)
 }
 
-func QueryOrder(filter OrderFilter) []Orders {
-	var order []Orders
+func QueryOrder(filter OrderFilter) []entity.Orders {
+	var order []entity.Orders
 	mfData := findAllOrders()
 	for _, v := range mfData {
 		if filter(&v) {
@@ -138,8 +140,8 @@ func QueryOrder(filter OrderFilter) []Orders {
 	return order
 }
 
-func QueryOrderfood(filter OrderfoodFilter) []Orderfood {
-	var orderfood []Orderfood
+func QueryOrderfood(filter OrderfoodFilter) []entity.Orderfood {
+	var orderfood []entity.Orderfood
 	mfData := findAllOrderfoods()
 	for _, v := range mfData {
 		if filter(&v) {
@@ -149,15 +151,15 @@ func QueryOrderfood(filter OrderfoodFilter) []Orderfood {
 	return orderfood
 }
 
-func QueryOrderfoodByID(id int) *[]Orderfood {
+func QueryOrderfoodByID(id int) *[]entity.Orderfood {
 	return findOrderfoodByID(id)
 }
 
-func QueryOrderByID(id int) *Orders {
+func QueryOrderByID(id int) *entity.Orders {
 	return findOrderByID(id)
 }
 
-func QueryOrderByPhone(phone string) *[]Orders {
+func QueryOrderByPhone(phone string) *[]entity.Orders {
 	return findOrderByPhone(phone)
 }
 
@@ -197,12 +199,12 @@ func DeleteOrderfood(filter OrderfoodFilter) int {
 	return count
 }
 
-func CreateComment(v *Comment) error {
+func CreateComment(v *entity.Comment) error {
 	return insertComment(v)
 }
 
-func QueryComment(filter CommentFilter) []Comment {
-	var comment []Comment
+func QueryComment(filter CommentFilter) []entity.Comment {
+	var comment []entity.Comment
 	mfData := findAllComments()
 	for _, v := range mfData {
 		if filter(&v) {
@@ -229,6 +231,6 @@ func QueryMenufoodTags() (int, []string) {
 	return findAllMenufoodByTag()
 }
 
-func QueryCommentByCount(begin, offset int) ([]Comment) {
+func QueryCommentByCount(begin, offset int) ([]entity.Comment) {
 	return findCommentByCount(begin, offset)
 }
