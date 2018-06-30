@@ -4,6 +4,7 @@ go:
   - 1.8.1
 before_install:
   - go get -v
-install:
+script:
   - go run main.go
+  - go test -v -race ./...  # Run all the tests with the race detector enabled
 
