@@ -55,7 +55,7 @@ func Free() {
 
 func getErrLogFile() *os.File {
 	//logPath := filepath.Join(os.Getenv("GOPATH"), "/src/Agenda/data/error.log")
-	logPath := "data/error.log"
+	logPath := "../data/error.log"
 	file, err := os.OpenFile(logPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("file open error : %v", err)
@@ -65,7 +65,7 @@ func getErrLogFile() *os.File {
 }
 
 func getLogFile() *os.File {
-	logPath := "data/info.log"
+	logPath := "../data/info.log"
 	file, err := os.OpenFile(logPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("file open error : %v", err)

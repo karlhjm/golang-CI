@@ -4,8 +4,8 @@ import (
 	"github.com/moandy/canyonsysu/entity"
 	"github.com/moandy/canyonsysu/loghelper"
 	//"fmt"
-	"github.com/moandy/canyonsysu/db"
 	simplejson "github.com/bitly/go-simplejson"
+	"github.com/moandy/canyonsysu/db"
 )
 
 func OrderfoodRegister(customer_phone string, table_id int, order_contain *simplejson.Json, total float64, order_num int, time string) (bool, error) {

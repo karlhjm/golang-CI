@@ -13,6 +13,6 @@ type Comment struct {
 }
 
 type Tags struct {
-	Tag string `json:"tag"`
-	Count int `json:"count"`
+	Tag   string `json:"tag"`
+	Count int    `json:"count"`
 }

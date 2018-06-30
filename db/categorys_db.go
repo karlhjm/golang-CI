@@ -1,12 +1,11 @@
 package db
 
 import (
-	"github.com/moandy/canyonsysu/loghelper"
-	"github.com/moandy/canyonsysu/entity"
 	_ "github.com/go-sql-driver/mysql" // for init
+	"github.com/moandy/canyonsysu/entity"
+	"github.com/moandy/canyonsysu/loghelper"
 	//"github.com/go-xorm/xorm"
 )
-
 
 func insertCategorys(v *entity.Categorys) error {
 	if affected, err := engine.Insert(v); err != nil {

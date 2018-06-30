@@ -2,7 +2,7 @@ package entity
 
 type Orders struct {
 	ID             int    `xorm:"pk autoincr"`
-	Customer_phone string `xorm:"pk notnull"`
+	Customer_phone string `xorm:"notnull"`
 	Table_id       int    `xorm:"notnull"`
 	Restaurant_id  int
 	Total          float64

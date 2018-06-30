@@ -2,7 +2,7 @@ package entity
 
 type Menufood struct {
 	ID            int     `xorm:"pk autoincr" json:"id"`
-	Name          string  `xorm:"pk notnull unique" json:"name"`
+	Name          string  `xorm:"unique" json:"name"`
 	Restaurant_id int     `json:"restaurant_id"`
 	Src           string  `json:"src"`
 	Price         float64 `json:"price"`
