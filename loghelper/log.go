@@ -67,7 +67,7 @@ func getErrLogFile() *os.File {
 }
 
 func getLogFile() *os.File {
-	logPath := filepath.Join(os.Getenv("GOPATH"), "/src/github.com/moandy/canyonsysu/data/info.log")
+	logPath := filepath.Join(os.Getenv("GOPATH"), "/src/github.com/karl-jm-huang/golang-CI/data/info.log")
 	file, err := os.OpenFile(logPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("file open error : %v", err)
