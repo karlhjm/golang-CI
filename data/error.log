@@ -22,3 +22,23 @@ ERROR: 2018/06/30 14:54:14 log.go:47: Start up Error log
 ERROR: 2018/06/30 14:55:49 log.go:47: Start up Error log
 ERROR: 2018/06/30 15:10:05 log.go:47: Start up Error log
 ERROR: 2018/06/30 16:38:59 log.go:47: Start up Error log
+ERROR: 2018/06/30 18:53:34 log.go:47: Start up Error log
+ERROR: 2018/06/30 18:53:46 log.go:47: Start up Error log
+ERROR: 2018/06/30 18:57:35 log.go:47: Start up Error log
+ERROR: 2018/06/30 18:59:51 log.go:47: Start up Error log
+ERROR: 2018/06/30 19:09:18 log.go:47: Start up Error log
+ERROR: 2018/06/30 19:09:25 log.go:47: Start up Error log
+ERROR: 2018/06/30 19:40:33 log.go:47: Start up Error log
+ERROR: 2018/06/30 19:43:34 log.go:47: Start up Error log
+ERROR: 2018/06/30 19:47:44 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:08:16 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:08:16 categorys_db.go:23: Error 1049: Unknown database 'hello2'
+ERROR: 2018/07/01 15:09:30 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:10:34 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:13:16 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:15:37 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:19:44 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:23:26 log.go:47: Start up Error log
+ERROR: 2018/07/01 15:31:43 log.go:48: Start up Error log
+ERROR: 2018/07/01 15:33:38 log.go:48: Start up Error log
+ERROR: 2018/07/01 18:23:53 log.go:48: Start up Error log

@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/moandy/canyonsysu/server"
 	"os"
+
+	"github.com/karl-jm-huang/golang-CI/server"
 
 	flag "github.com/spf13/pflag"
 )
