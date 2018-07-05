@@ -1,19 +1,13 @@
 language: go
-sudo: require
+sudo: false
 dist: trusty
 go:
   - 1.9.2
 
-addons:
-  apt:
-    sources:
-      - mysql-5.7-trusty
-    packages:
-      - mysql-server
-      - mysql-client
-      
+before_script:
+  - echo "USE mysql;\nUPDATE user SET password=PASSWORD('mysql') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
+
 before_install:
-  - sudo service mysql restart
   - mysql -e 'create database hello2;'
   - go get -v
 
