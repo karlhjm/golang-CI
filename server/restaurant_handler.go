@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/karl-jm-huang/golang-CI/loghelper"
-	"github.com/karl-jm-huang/golang-CI/service"
+	"github.com/karlhjm/golang-CI/loghelper"
+	"github.com/karlhjm/golang-CI/service"
 	//"path/filepath"
 	//"strconv"
 	simplejson "github.com/bitly/go-simplejson"

@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/karl-jm-huang/golang-CI/server"
+	"github.com/karlhjm/golang-CI/server"
 
 	flag "github.com/spf13/pflag"
 )

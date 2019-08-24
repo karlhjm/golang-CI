@@ -1,9 +1,9 @@
 package service
 
 import (
-	"github.com/karl-jm-huang/golang-CI/db"
-	"github.com/karl-jm-huang/golang-CI/entity"
-	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karlhjm/golang-CI/db"
+	"github.com/karlhjm/golang-CI/entity"
+	"github.com/karlhjm/golang-CI/loghelper"
 )
 
 func MenufoodRegister(name string, price float64, restaurant_id int, categorys string, detail string, src string) (bool, error) {

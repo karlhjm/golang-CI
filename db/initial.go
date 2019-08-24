@@ -3,7 +3,7 @@ package db
 import (
 	_ "github.com/go-sql-driver/mysql" // for init
 	"github.com/go-xorm/xorm"
-	"github.com/karl-jm-huang/golang-CI/entity"
+	"github.com/karlhjm/golang-CI/entity"
 )
 
 var engine *xorm.Engine

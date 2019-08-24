@@ -1,10 +1,10 @@
 package service
 
 import (
-	"github.com/karl-jm-huang/golang-CI/entity"
-	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karlhjm/golang-CI/entity"
+	"github.com/karlhjm/golang-CI/loghelper"
 	//"fmt"
-	"github.com/karl-jm-huang/golang-CI/db"
+	"github.com/karlhjm/golang-CI/db"
 	//simplejson "github.com/bitly/go-simplejson"
 )
 

@@ -1,6 +1,6 @@
 package db
 
-import "github.com/karl-jm-huang/golang-CI/entity"
+import "github.com/karlhjm/golang-CI/entity"
 
 //CustomerFilter ...
 type CustomerFilter func(*entity.Customer) bool

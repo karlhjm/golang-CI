@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	simplejson "github.com/bitly/go-simplejson"
-	"github.com/karl-jm-huang/golang-CI/entity"
+	"github.com/karlhjm/golang-CI/entity"
 )
 
 func TestOrderfoodRegister(t *testing.T) {

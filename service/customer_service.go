@@ -1,11 +1,11 @@
 package service
 
 import (
-	"github.com/karl-jm-huang/golang-CI/entity"
-	"github.com/karl-jm-huang/golang-CI/loghelper"
+	"github.com/karlhjm/golang-CI/entity"
+	"github.com/karlhjm/golang-CI/loghelper"
 	//"fmt"
 	//simplejson "github.com/bitly/go-simplejson"
-	"github.com/karl-jm-huang/golang-CI/db"
+	"github.com/karlhjm/golang-CI/db"
 )
 
 func CustomerRegister(name string, password string, restaurant_id int, phone string) (bool, error) {

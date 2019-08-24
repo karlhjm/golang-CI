@@ -3,8 +3,8 @@ package server
 import (
 	//"go-agenda-service/service/entity"
 	//"go-agenda-service/service/service"
-	"github.com/karl-jm-huang/golang-CI/loghelper"
-	"github.com/karl-jm-huang/golang-CI/service"
+	"github.com/karlhjm/golang-CI/loghelper"
+	"github.com/karlhjm/golang-CI/service"
 	//"fmt"
 	"net/http"
 	//"path/filepath"

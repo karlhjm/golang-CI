@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/karl-jm-huang/golang-CI/service"
+	"github.com/karlhjm/golang-CI/service"
 	"github.com/unrolled/render"
 )
 
